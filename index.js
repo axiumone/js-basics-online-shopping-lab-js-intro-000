@@ -21,8 +21,8 @@ function addToCart(item) {
 function viewCart() {
   var current_cart = [`In your cart, you have`];
   return (cart.length === 0) ? "Your shopping cart is empty.";
-    : (cart.length === 1) ? current_cart += ` ${cart[0].func() + "."}`;
-    : (cart.length === 2) ? current_cart += ` ${cart[0].func()}, and ${cart[1].func() + "."}`;
+    : (cart.length === 1) ? (current_cart += ` ${cart[0].func() + "."}`);
+    : (cart.length === 2) ? (current_cart += ` ${cart[0].func()}, and ${cart[1].func() + "."}`);
     // : for(var i = 0; i < cart.length; i++) {
     //   current_cart.push(`${cart[i].func()},`);
     // }
