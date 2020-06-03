@@ -62,11 +62,13 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  if(cardNumber === undefined ) {
-    return "Sorry, we don't have a credit card on file for you.";
-  } else {
-    var cart_total = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`;
-    cart.length = 0;
-    return cart_total;
-   }
+  return (cardNumber === undefined ) ? "Sorry, we don't have a credit card on file for you."
+    : var cart_total = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`; cart.length = 0;
+  // if(cardNumber === undefined ) {
+  //   return "Sorry, we don't have a credit card on file for you.";
+  // } else {
+  //   var cart_total = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`;
+  //   cart.length = 0;
+  //   return cart_total;
+  //  }
 }
