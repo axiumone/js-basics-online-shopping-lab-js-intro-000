@@ -20,34 +20,24 @@ function addToCart(item) {
 
 function viewCart() {
   var current_cart = [`In your cart, you have`];
-  return (cart.length === 0) ? "Your shopping cart is empty.";
-    : (cart.length === 1) ? (current_cart += ` ${cart[0].func() + "."}`);
-    : (cart.length === 2) ? (current_cart += ` ${cart[0].func()}, and ${cart[1].func() + "."}`);
-    // : for(var i = 0; i < cart.length; i++) {
-    //   current_cart.push(`${cart[i].func()},`);
-    // }
-    // current_cart.splice(-1, 0, "and");
-    // var cart_string = current_cart;
-    // var final = cart_string.join(" ");
-    // return final.slice(0,-1) + ".";
-  // if(cart.length === 0) {
-  //   return "Your shopping cart is empty.";
-  // } else if (cart.length === 1) {
-  //     current_cart += ` ${cart[0].func() + "."}`;
-  //     return current_cart;
-  //   } else if (cart.length === 2) {
-  //       current_cart += ` ${cart[0].func()}, and ${cart[1].func() + "."}`;
-  //       return current_cart;
-  //     } else {
-  //         for(var i = 0; i < cart.length; i++) {
-  //           current_cart.push(`${cart[i].func()},`);
-  //         }
-  //         current_cart.splice(-1, 0, "and");
-  //         var cart_string = current_cart;
-  //         var final = cart_string.join(" ");
-  //         return final.slice(0,-1) + ".";
-  //
-  //   }
+  if(cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else if (cart.length === 1) {
+      current_cart += ` ${cart[0].func() + "."}`;
+      return current_cart;
+    } else if (cart.length === 2) {
+        current_cart += ` ${cart[0].func()}, and ${cart[1].func() + "."}`;
+        return current_cart;
+      } else {
+          for(var i = 0; i < cart.length; i++) {
+            current_cart.push(`${cart[i].func()},`);
+          }
+          current_cart.splice(-1, 0, "and");
+          var cart_string = current_cart;
+          var final = cart_string.join(" ");
+          return final.slice(0,-1) + ".";
+  
+    }
 }
 
 
