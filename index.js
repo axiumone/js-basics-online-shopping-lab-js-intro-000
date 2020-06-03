@@ -36,7 +36,7 @@ function viewCart() {
           var cart_string = current_cart;
           var final = cart_string.join(" ");
           return final.slice(0,-1) + ".";
-  
+
     }
 }
 
